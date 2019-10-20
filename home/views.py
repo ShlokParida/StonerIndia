@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
+from blog.models import Blog
 
 def homepage(request):
-    return render(request,'home/home.html')
+    bloglist = Blog.objects
+    return render(request,'home/home.html',{'blogs':bloglist})

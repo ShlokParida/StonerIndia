@@ -38,7 +38,7 @@
   <div class="p-3 mb-2 bg-dark text-white">
     <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="{% url 'home' %}">
+  <a class="navbar-brand" href="{% url 'home'%}">
     <img src="{% static 'StonerIndiaLogoSmall.png' %}" width="45" height="45" class="d-inline-block" />Stoner India  
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,9 +46,9 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link" href="{% url 'alltracks'%}">Music </a>
-      <a class="nav-item nav-link" href="">About Us</a>
-      <a class="nav-item nav-link" href="{% url 'allblog' %}">Blog</a> 
+      <a class="nav-item nav-link active" href="#">Music </a>
+      <a class="nav-item nav-link" href="#' %}">About Us</a>
+      <a class="nav-item nav-link" href="{% url 'allblog' %}">Blog</a>
     </div>
   </div>
 </nav>
@@ -58,9 +58,36 @@
 
   <section class="jumbotron text-center bg-dark text-white">
     <div class="container bg-dark text-white">
-      <h1>Welcome To Stoner India</h1>
-      </div>
+      <h1 class="jumbotron-heading">Welcome To Radio StonerIndia</h1>
+      <p class="lead text-muted">Music Curated by tokers, for tokers.</p>
+    </div>
   </section>
+  
+
+  <div class="album py-5 bg-dark">
+    <div class="container bg-dark text-white">
+
+      <div class="row">
+      
+     {% for track in tracks.all %}
+     
+        <div class="col-md-4 ">
+          <div class="card mb-4 shadow-sm bg-light text-dark">
+            <img class = "card-img-top" src = "{{track.track_thumbnail.url}}">
+            <div class="card-body">
+              <h5 class = "card-title">{{track.track_name}}</h5>
+     
+              
+              <a href="{{ track.track_link }}" style = "color:black" target="_blank"><p class = "card-text">Listen Now</p>
+              <img src="{% static 'vippng.com-play-button-png-1117124.png' %}" width="30" height="30" class = "d-inline-block"/>
+              </a>
+             </div>
+          </div>
+          </div>
+        {% endfor %}
+         </div>
+         </div>
+         </div>        
 </main>
 
 <footer class="text-muted">

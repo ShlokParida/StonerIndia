@@ -47,8 +47,8 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
       <a class="nav-item nav-link" href="{% url 'alltracks'%}">Music </a>
-      <a class="nav-item nav-link" href="">About Us</a>
-      <a class="nav-item nav-link" href="{% url 'allblog' %}">Blog</a> 
+      <a class="nav-item nav-link" href="#' %}">About Us</a>
+      <a class="nav-item nav-link active" href="{% url 'allblog' %}">Blog</a>
     </div>
   </div>
 </nav>
@@ -61,6 +61,29 @@
       <h1>Welcome To Stoner India</h1>
       </div>
   </section>
+  
+
+  <div class="album py-5 bg-dark">
+    <div class="container bg-dark text-white">
+
+      <div class="row">
+      
+     {% for blog in blogs.all %}
+        <div class="col-md-4 ">
+          <div class="card mb-4 shadow-sm bg-light text-dark">
+            <a href="{% url 'detail' blog.id %}">
+            <img class = "card-img-top" src = "{{blog.blog_image.url}}">
+            <div class="card-body">
+              <h5 class = "card-title">{{blog.blog_title}}</h5>
+              </a>
+              <p class = "card-text">{{blog.summary}}</p>
+             </div>
+          </div>
+          </div>
+        {% endfor %}
+         </div>
+         </div>
+         </div>        
 </main>
 
 <footer class="text-muted">
