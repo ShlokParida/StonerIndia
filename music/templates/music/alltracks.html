@@ -14,28 +14,11 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
     <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+<link rel="stylesheet" href="{% static 'neo.css' %}">
     </style>
     </head>
   <body>
-  <div class="p-3 mb-2 bg-dark text-white">
+  <div>
     <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="{% url 'home'%}">
@@ -56,29 +39,29 @@
 <hr />
 <main role="main">
 
-  <section class="jumbotron text-center bg-dark text-white">
-    <div class="container bg-dark text-white">
-      <h1 class="jumbotron-heading">Welcome To Radio StonerIndia</h1>
-      <p class="lead text-muted">Music Curated by tokers, for tokers.</p>
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading text-warning">Welcome To Radio StonerIndia</h1>
+      <p class="lead text-success">Music Curated by tokers, for tokers.</p>
     </div>
   </section>
   
 
-  <div class="album py-5 bg-dark">
-    <div class="container bg-dark text-white">
+  <div class="album py-5">
+    <div class="container">
 
       <div class="row">
       
      {% for track in tracks.all %}
      
         <div class="col-md-4 ">
-          <div class="card mb-4 shadow-sm bg-light text-dark">
+          <div class="card mb-4">
             <img class = "card-img-top" src = "{{track.track_thumbnail.url}}">
             <div class="card-body">
-              <h5 class = "card-title">{{track.track_name}}</h5>
+              <h5 class = "card-title text-primary">{{track.track_name}}</h5>
      
               
-              <a href="{{ track.track_link }}" style = "color:black" target="_blank"><p class = "card-text">Listen Now</p>
+              <a href="{{ track.track_link }}" style = "color:black" target="_blank"><p class = "card-text text-white">Listen Now</p>
               <img src="{% static 'vippng.com-play-button-png-1117124.png' %}" width="30" height="30" class = "d-inline-block"/>
               </a>
              </div>

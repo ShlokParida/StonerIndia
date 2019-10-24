@@ -14,28 +14,10 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
     <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
+<link rel="stylesheet" href="{% static 'neo.css' %}">
     </head>
   <body>
-  <div class="p-3 mb-2 bg-dark text-white">
+  <div class="p-3 mb-2 text-white">
     <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="{% url 'home' %}">
@@ -56,32 +38,36 @@
 <hr />
 <main role="main">
 
-  <section class="jumbotron text-center bg-dark text-white">
-    <div class="container bg-dark text-white">
-      <h1>The Stoner India Team</h1>
-      </div>
+  <section class="text-center">
+      
+      <h1 class=text-warning>The Stoner India Team</h1>
+  
   </section>
-
+  <br />
+  <br />
+  <br />
   <div class="media">
   <img src="{% static 'ShlokProfile.jpg'%}" class="mr-3" height = 350 />
   <div class="media-body">
-    <h1 class="mt-0">Shlok Parida - Website and Design </h1>
+    <h2 class="mt-0 text-success">Shlok Parida - Website and Design </h2>
     <i> - "Baked more than a chocolate cake."</i>
     <br />
     <br />
     <br />
-    <h4 class="mt-0">Shlok is a full time Developer loves a good bowl.</h4>
-    <h4 class="mt-0">     He's an engineer by education and a Dank person by preference.
-</h4>    
+    <h5 class="mt-0">Shlok is a full time Developer loves a good bowl.</h5>
+    <h5 class="mt-0">     He's an engineer by education and a Dank person by preference.
+</h5>    
   </div>
   <hr />
 </div>
 </main>
 
-<footer class="text-muted">
+<footer class="footer mt-auto py-3">
   <div class="container text-center">
+    <span>
     <p> &copy; Shlok Parida and StonerIndia {% now "Y" %}</p>
     <p></p>
+  </span>
   </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
