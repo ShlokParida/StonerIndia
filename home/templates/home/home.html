@@ -3,6 +3,8 @@
 <html lang="en">
   <head>
     {% load staticfiles %}
+    {% load instagram_client %}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -60,7 +62,20 @@
 <div class = "container"><h1 class="text-center text-warning">Stoner India</h1>
 <p class = "text-success text-center">Marijuana and Hemp Activists from the IND</p>
 </div>
-
+<!-- <div class = "container">
+  <h3 class = "text-danger">Instagram</h3>
+<div id="django_recent_media_wall">
+    {% instagram_user_recent_media instagram_profile_name %}
+    {% for media in recent_media %}
+        <div class="django_instagram_media_wall_item">
+            <a href="//instagram.com/p/{{ media.shortcode }}" target="_blank">
+                <img src="{{ media.thumbnail_src }}" width = 300/>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+<p>Got from instagram</p>
+</div> -->
 <footer class="text-muted">
   <div class="container text-center">
     <p> &copy; Shlok Parida and StonerIndia {% now "Y" %}</p>
