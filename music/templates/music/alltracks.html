@@ -17,25 +17,28 @@
 <link rel="stylesheet" href="{% static 'neo.css' %}">
     </style>
     </head>
-  <body>
-  <div>
-    <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="{% url 'home'%}">
-    <img src="{% static 'StonerIndiaLogoSmall.png' %}" width="45" height="45" class="d-inline-block" />Stoner India  
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link active" href="{% url 'alltracks' %}">Music </a>
-      <a class="nav-item nav-link" href="{% url 'about' %}">About Us</a>
-      <a class="nav-item nav-link" href="{% url 'allblog' %}">Blog</a>
+    <body>
+      <div class="p-3 mb-2">
+        <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="{% static 'StonerIndiaLogoSmall.png' %}" width="45" height="45" class="d-inline-block" />Stoner India  
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="{% url 'alltracks'%}">Music </a>
+          <a class="nav-item nav-link" href="{% url 'about' %}">About Us</a>
+          <a class="nav-item nav-link active" href="{% url 'allblog' %}">Blog</a>
+        </div>
+      </div>
+    </nav>
+    </header>
     </div>
-  </div>
-</nav>
-</header>
+    </body>
+    <hr />
 <hr />
 <main role="main">
 

@@ -139,5 +139,13 @@ MEDIA_URL = '/media/'
 
 try:
     from .local_settings import *
+<<<<<<< HEAD
 except ImportError:
     pass
+=======
+
+except (ImportError):
+    pass
+
+    
+>>>>>>> 529e74417324fe33a38da83bd6c2d42bab8262c5
