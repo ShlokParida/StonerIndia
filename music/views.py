@@ -3,8 +3,7 @@ from .models import Music
 
 def alltracks(request):
     tracklist=Music.objects
-    tracklist = tracklist
-    return render(request,'music/alltracks.html',{'tracks':tracklist.reverse()})
+    return render(request,'music/alltracks.html',{'tracks':tracklist})
 
 def track(request,track_id):
     soundtrack=get_object_or_404(Music, pk=track_id)
