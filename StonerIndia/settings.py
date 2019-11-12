@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'l(@uj-kk((4wgjfkcy83*!y9vonrm9bmne!nnqy^rg991as$ti'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.stonerindia.website' , '139.59.89.198' ]
+ALLOWED_HOSTS = ['127.0.0.1' , 'localhost']
 
 
 # Application definition
