@@ -29,9 +29,20 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link active " href="{% url 'alltracks'%}">Music </a>
-          <a class="nav-item nav-link" href="{% url 'about' %}">About Us</a>
-          <a class="nav-item nav-link " href="{% url 'allblog' %}">Blog</a>
+            <a class="nav-item nav-link active " href="{% url 'alltracks'%}">Music </a>
+            <a class="nav-item nav-link " href="{% url 'allblog' %}">Blog</a>
+            <a class="nav-item nav-link " href="{% url 'about' %}">About Us</a>
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                <div class="btn-group" role="group">
+                   <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                   <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-115px, 35px, 0px);">
+                      <a class="dropdown-item" href="https://www.instagram.com/stonerindia/" target="blank">Instagram</a>
+                      <a class="dropdown-item" href="https://www.facebook.com/stonerindia420/" target="blank">Facebook</a>
+                      <a class="dropdown-item" href="https://www.stonerindia.blogspot.com/" target="blank">Blog</a>
+                   </div>
+                 </div>
+                 <button type="button" class="btn btn-outline-secondary">Social</button>
+               </div>
         </div>
       </div>
     </nav>
