@@ -1,0 +1,17 @@
+ALLOWED_HOSTS = ['www.stonerindia.website' , '139.59.89.198']
+DATA
+
+
+
+
+
+BASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'stonerdb',
+        'USER': 'stoner',
+        'PASSWORD': 'cleanANDgreen',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}
